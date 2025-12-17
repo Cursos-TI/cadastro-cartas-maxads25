@@ -26,7 +26,7 @@ int main() {
     scanf(" %3s", codcarta1);
    
     printf("Digite o nome da cidade(sem espaços): ");
-    scanf(" %s", nomecidade1);
+    scanf(" %49s", nomecidade1);
 
     printf("Digite a população total: ");
     scanf(" %lu", &populacao1);
@@ -49,7 +49,7 @@ int main() {
     scanf(" %3s", codcarta2);
     
     printf("Digite o nome da cidade(sem espaços): ");
-    scanf(" %s", &nomecidade2);
+    scanf(" %49s", nomecidade2);
 
     printf("Digite a população total: ");
     scanf(" %lu", &populacao2);
@@ -81,7 +81,7 @@ int main() {
     printf("Estado: %c\n", estado1);
     printf("Código da carta: %c%s\n", estado1, codcarta1);
     printf("Nome da cidade: %s\n", nomecidade1);
-    printf("População: %d\n", populacao1);
+    printf("População: %lu\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$ %.2f\n", pib1);
     printf("Número de pontos turísticos: %d\n", npturisticos1);
@@ -93,7 +93,7 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código da carta: %c%s\n", estado2, codcarta2);
     printf("Nome da cidade: %s\n", nomecidade2);
-    printf("População: %d\n", populacao2);
+    printf("População: %lu\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$ %.2f\n", pib2);
     printf("Número de pontos turísticos: %d\n", npturisticos2);
@@ -109,6 +109,7 @@ int main() {
     resultadoPTuristico = npturisticos1 > npturisticos2;
     resultadoDensidadeP = densidade_pop1 < densidade_pop2;
     resultadoPibPerc = pib_percapta1 > pib_percapta2;
+    resultadoSuperPoder = superPoder1 > superPoder2;
 
     printf("\n *** Carta vencedora *** \n");
     printf("\n *** 1 - Carta1 Venceu! / 0 - Carta2 Venceu! *** \n");
